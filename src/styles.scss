@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: "Nunito","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.list-item{
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding:15px;
+  &:first-child{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  &:last-child{
+    border-top:none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  &:only-child{
+    border:1px solid rgba(0, 0, 0, 0.15);;
+  }
+
+}

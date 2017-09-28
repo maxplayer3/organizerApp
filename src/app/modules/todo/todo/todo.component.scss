@@ -1,0 +1,8 @@
+.todo-wrapper{
+    .list-item{
+        &.done{
+            background: #f7f7f7;
+            color:gray;
+        }
+    }
+}

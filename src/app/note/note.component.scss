@@ -1,0 +1,32 @@
+.note-types {
+    padding: 0;
+    display:table;
+    width:50%;
+    margin:0 auto;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    li {
+    background-color: #f7f7f7;
+    text-align: center;
+    border:1px solid darken(#f7f7f7, 10);
+    border-right:none;
+    
+    display:table-cell;
+    &.active{
+        background:red;
+        color:#fff;
+    }
+    &:hover{
+cursor: pointer;
+background-color: darken(#f7f7f7, 5);
+    }
+    &:first-child{
+        border-left:1px solid darken(#f7f7f7, 10);
+    }
+    &:last-child{
+        border-right:1px solid darken(#f7f7f7, 10);
+    }
+}
+
+}
