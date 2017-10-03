@@ -7,15 +7,13 @@ import { PaginationComponent} from "../pagination/pagination.component"
 })
 export class ExtendedPaginationComponent extends PaginationComponent implements OnInit {
 
-  
-  
   constructor() {
     super();
     this.pages.push(9)
   }
   
-
   ngOnInit() {
+    
   }
 
 }

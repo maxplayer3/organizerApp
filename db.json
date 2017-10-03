@@ -1,17 +1,15 @@
 {
   "todos": [
     {
-      "id": 1506609630986,
+      "id": 1507019126052,
       "completed": true,
-      "title": "test"
+      "title": "Some todo 1"
+    },
+    {
+      "id": 1507019139316,
+      "completed": false,
+      "title": "UPPERCASE todo item"
     }
   ],
-  "notes": [
-    {
-      "id": 1506609644586,
-      "title": "blan",
-      "text": "test\n\n",
-      "tag": "quote"
-    }
-  ]
+  "notes": []
 }

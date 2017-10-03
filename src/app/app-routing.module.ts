@@ -4,11 +4,7 @@ import { NoteComponent } from './note/note.component'
 
 const routes: Routes = [
   {path:"note", component: NoteComponent, data: {visibleName: "Notes", showInNavigation: true}},
-  { path: '',
-  redirectTo: '/',
-  pathMatch: 'full'
-},
-// { path: '**', component: PageNotFoundComponent }
+  { path: '', redirectTo: '/', pathMatch: 'full'}
 ];
 
 @NgModule({

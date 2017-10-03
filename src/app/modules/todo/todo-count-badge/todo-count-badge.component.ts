@@ -11,9 +11,9 @@ export class TodoCountBadgeComponent implements OnInit {
   constructor(private todoService: TodoService) { }
 
   ngOnInit() {
-    this.todoService.getCount().subscribe((data) => { 
+    this.todoService.getCount().subscribe((data) => {
       this.count = data
-     }, (err) => {console.log(err)})
+    }, (err) => { console.log(err) })
   }
 
 }

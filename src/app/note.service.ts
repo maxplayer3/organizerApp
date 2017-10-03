@@ -21,19 +21,19 @@ export class NoteService {
 
   addNote(note: Note): Observable<any> {
     return this.http.post(this.const.apiUrl + "/notes", note)
-      .map((res: Response) => res.json()) 
-      .catch((error: any) => Observable.throw('Server error')); 
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw('Server error'));
   }
 
   updateNote(note: Note): Observable<any> {
     return this.http.put(this.const.apiUrl + "/notes/" + note.id, note)
-      .map((res: Response) => res.json()) 
-      .catch((error: any) => Observable.throw('Server error')); 
+      .map((res: Response) => res.json())
+      .catch((error: any) => Observable.throw('Server error'));
   }
 
   deleteNote(id: String): Observable<any> {
     return this.http.delete(this.const.apiUrl + "/notes/" + id)
-      .map((res: Response) => res.json()) 
+      .map((res: Response) => res.json())
       .catch((error: any) => Observable.throw('Server error'));
   }
 

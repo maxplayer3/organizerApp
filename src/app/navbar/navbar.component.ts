@@ -7,16 +7,10 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   routes: Array<Object>
-  count: number = 5
 
-  constructor( private router: Router) { 
-    
-  }
-
-
+  constructor( private router: Router) { }
 
   ngOnInit() {
-    
     this.routes = this.router.config;
   }
 

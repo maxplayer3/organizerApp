@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appTitle = 'Some title set by Root';
-  countChange(event){
+  changeTitle(event){
     this.appTitle = event
   }
 }

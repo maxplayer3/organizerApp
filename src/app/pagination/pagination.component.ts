@@ -7,20 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
 
-  pages:Array<Number> = [1,2,3,4,5,6,7,8]
-  currentPage:number = 1;
+  pages: Array<Number> = [1, 2, 3, 4, 5, 6, 7, 8]
+  currentPage: number = 1;
 
   constructor() { }
 
-  nextPage(){
+  nextPage() {
     this.currentPage++
   }
 
-  prevPage(){
+  prevPage() {
     this.currentPage--
   }
 
-  selectPage(page:number){
+  selectPage(page: number) {
     this.currentPage = page;
   }
 

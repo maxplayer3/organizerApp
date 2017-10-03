@@ -18,16 +18,13 @@ export class TodoComponent implements OnInit {
   }
 
   addNewTodo() {
-    this.TodoService.addNew(new Todo({ title: this.title })).subscribe(todos => {
-      this.getTodos();
-      this.title = ""
-
-
-    }, //Bind to view
-      err => {
-        // Log errors if any
-        console.log(err);
-      })
+    let subscriber = this.TodoService.addNew(new Todo({ title: this.title })).subscribe(
+      todos => {
+        this.getTodos();
+        this.title = "";
+      },
+      err => { console.log(err) },
+      () => { subscriber.unsubscribe() })
   }
 
   updateCount() {
@@ -35,41 +32,38 @@ export class TodoComponent implements OnInit {
   }
 
   deleteTodo(id) {
-    this.TodoService.deleteTodo(id).subscribe(() => {
-      this.getTodos();
-      this.updateCount();
-    }, //Bind to view
-      err => {
-        // Log errors if any
-        console.log(err);
-      })
+    let subscriber = this.TodoService.deleteTodo(id).subscribe(
+      () => {
+        this.getTodos();
+        this.updateCount();
+      },
+      err => { console.log(err) },
+      () => { subscriber.unsubscribe() })
   }
 
   markCompleted(todo) {
     todo.completed = true;
-    this.TodoService.markCompleted(todo).subscribe(() => { this.getTodos() }, //Bind to view
-      err => {
-        // Log errors if any
-        console.log(err);
-      })
+    let subscriber = this.TodoService.markCompleted(todo).subscribe(
+      () => { this.getTodos() },
+      err => { console.log(err) },
+      () => { subscriber.unsubscribe() })
   }
 
   getTodos() {
-    this.TodoService.getAll().subscribe(todos => {
-      this.todos = todos;
-      this.updateCount()
-    }, //Bind to view
-      err => {
-        // Log errors if any
-        console.log(err);
-      })
+    let subscriber = this.TodoService.getAll().subscribe(
+      todos => {
+        this.todos = todos;
+        this.updateCount()
+      },
+      err => { console.log(err) },
+      () => { subscriber.unsubscribe() })
   }
 
   ngOnInit() {
     this.getTodos();
   }
 
-  ngOnDestroy() {
+  ngOnDestroy() { // Lifecycle hook when component is destroyed
     console.log("Component TodoComponent destroyed")
   }
 
