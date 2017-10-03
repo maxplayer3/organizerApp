@@ -8,6 +8,7 @@ To run this please use following instructions
   - Go to application folder
   - Install Angular CLI via **" npm install @angular/cli -g "**
   - Install json-server via **" npm install json-server -g "**
+  - Install dependencies via **" npm install "**
   - Run **" json-server db.json "**
   - Run **" ng serve "**
   - Go to browser and open **" http://localhost:4200 "**
